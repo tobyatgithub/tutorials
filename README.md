@@ -28,8 +28,8 @@ This repository provides tutorial code to explore and learn various projects in 
 ## Contents
 
 ### [Basics]()
-### [Intermediate]()
-### [Advanced]()
+### [Intermediate]() [WIP]
+### [Advanced]() [WIP]
 
 
 ## For Contributors
