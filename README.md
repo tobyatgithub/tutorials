@@ -29,7 +29,7 @@ This repository provides tutorial code to explore and learn various projects in 
 
 ### [Basics](https://github.com/OpenMined/tutorials/tree/master/beginner)
 - [Pysonar-Decentralized model training simulation](https://github.com/OpenMined/tutorials/blob/master/beginner/Pysonar-Decentralized%20model%20training%20simulation.ipynb)
-- [Pysyft-Paillier Homographic Encrypted Linear Classification](https://github.com/OpenMined/tutorials/blob/master/beginner/Pysyft Paillier%20Homographic%20Encrypted%20Linear%20Classification.ipynb)
+- [Pysyft-Paillier Homographic Encrypted Linear Classification](https://goo.gl/86M4bg)
 ### [Intermediate]() [WIP]
 ### [Advanced]() [WIP]
 
