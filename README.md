@@ -1,6 +1,6 @@
 # Tutorials
 
-OpenMined is an unincorporated, volunteer-only open source project to provide federated machine learning using blockchain technology. 
+> OpenMined is an unincorporated, volunteer-only open source project to provide federated machine learning using blockchain technology.
 
 This repository provides tutorial code to explore and learn various projects in the openmined ecosystem.
 
@@ -23,7 +23,7 @@ This repository provides tutorial code to explore and learn various projects in 
 - Install pysyft by following the instructions listed over [here](https://github.com/OpenMined/PySyft/blob/master/README.md)
 - Install pysonar by following the instructions listed over [here](https://github.com/OpenMined/PySonar/blob/master/README.md)
 - Install capsule by following the instructions listed over [here](https://github.com/OpenMined/Capsule/blob/master/README.md)
-- Set up a virtual environment for the Python libraries (optional, recommended)
+
 
 ## Contents
 
