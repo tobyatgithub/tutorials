@@ -1,4 +1,5 @@
 # Tutorials
+[![Chat on Slack](https://img.shields.io/badge/chat-on%20slack-7A5979.svg)](https://openmined.slack.com/messages/beginner)
 
 > OpenMined is an unincorporated, volunteer-only open source project to provide federated machine learning using blockchain technology.
 
