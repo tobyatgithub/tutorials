@@ -1,6 +1,6 @@
 # Windows - Setting up your Dev Environment
 
-In this document, we're going to condense how you should setup your machine in preparation for the rest of the tutorials contained in this document. Running OpenMined means having several different applications and repositories correctly installed and ready to work together, which can have unique challenges for each system. To that end, let's get your Windows up and running!!!
+In this document, we're going to condense how you should setup your machine in preparation for the rest of the tutorials contained in this document. Running OpenMined means having several different applications and repositories correctly installed and ready to work together, which can have unique challenges for each system. To that end, let's get your PC up and running!!!
 
 # Step 1: Install Unity
 
@@ -22,41 +22,41 @@ First, navigate to the [Windows Anaconda Download Page](https://www.anaconda.com
 
 If you installed Anaconda, you have already installed jupyter notebook! If you did not, you'll need to use [these instructions](http://jupyter.readthedocs.io/en/latest/install.html) as a backup.
 
-
-
 # Step 3: Clone & Build Relevant Repositories
 
 Start by creating a general directory for your OpenMined projects. In that directory, run the following commands. 
 
-#### Part 1: Clone
+#### Part 1: Fork & Clone
 
-This can be completed in Git bash if you have that installed or where ever you have Git installed. Here's how to clone from Git bash.
+At this point if you're planning on contributing back to the project its best to fork the repo on Github. Navigate to [OpenMined Repo](https://github.com/OpenMined/OpenMined.git) and click the Fork button. Repeat the same process for the [PySyft Repo](https://github.com/OpenMined/PySyft).
 
-> git clone https://github.com/OpenMined/OpenMined.git
+Now clone! This can be completed in Git bash if you have that installed or where ever you have Git installed. Here's how to clone from Git bash. You might also need to set up public/private keys to clone in this way. See tutorial [here](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows).
+
+`git clone git@github.com:**YOUR-GITHUB-USERNAME-HERE**/OpenMined.git`
  
-> git clone https://github.com/OpenMined/PySyft
+`git clone git@github.com:**YOUR-GITHUB-USERNAME-HERE**/PySyft.git`
 
 #### Part 2: Build
 
-> cd PySyft
+From here I'd recommend using the Anaconda commandline. Might not be the best interface but I found it the easiest way to get access to python and Anaconda commandline tools without to much fuss!
 
-> ./install_for_anaconda_windows.bat?????
+TODO: image to Anaconda commandline
 
-> python3 setup.py install
+`cd PySyft`
 
-> cd ../
+`./install_for_anaconda_windows.bat` TODO: what is the actual way to run this?
+
+`python3 setup.py install`
+
+`cd ../`
 
 If you have any trouble with the installation of PySyft, debug using the [README](https://github.com/OpenMined/PySyft).
 
 # Step 4: Start Jupyter Notebook
 
-This part can be run from your choice of commandline as long as the commandline has access to the anaconda commands. This can be set up in many different ways. The easiest way I found was to open the Anaconda commandline. It already has access to the proper commands!
-
-TODO: image to Anaconda commandline
-
 From your general directory (containing both your OpenMined and PySyft folders), run the following command.
 
->jupyter notebook
+`jupyter notebook`
 
 This should start the jupyer notebook server and automatically open your browser to the main jupyter notebook folder.
 
