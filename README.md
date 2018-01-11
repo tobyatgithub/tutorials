@@ -1,7 +1,7 @@
 # Tutorials
 [![Chat on Slack](https://img.shields.io/badge/chat-on%20slack-7A5979.svg)](https://openmined.slack.com/messages/beginner)
 
-This repository includes step-by-step tutorials for using and adding to functionality within the OpenMined ecosystem. Before you begin, you should start by completing our [OSX](https://github.com/OpenMined/tutorials/blob/master/installation/OSX.markdown) or [Windows](https://github.com/OpenMined/tutorials/blob/master/installation/Windows.markdown) installation guides which will get you setup and ready to complete the tutorials.
+This repository includes step-by-step tutorials for using and adding to functionality within the OpenMined ecosystem. Before you begin, you should start by completing our [OSX](https://github.com/OpenMined/tutorials/blob/master/installation/OSX.markdown) or [Windows](https://github.com/OpenMined/tutorials/blob/master/installation/Windows.markdown) installation guides which will get you setup and ready to complete the tutorials. If you get stuck, the best place to ask questions is in the #beginner slack channel which you can reach by clicking the Slack button above this paragraph.
 
 <!-- TOC depthFrom:2 -->
 
