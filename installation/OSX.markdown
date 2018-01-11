@@ -38,9 +38,11 @@ Now, when you run the following command, it should tell you "3.6"
 
 If you installed Anaconda, you have already installed jupyter notebook! If you did not, you'll need to use [these instructions](http://jupyter.readthedocs.io/en/latest/install.html) as a backup.
 
-# Step 3: Clone & Build Relevant Repositories
+# Step 3: Fork, Clone & Build Relevant Repositories
 
+#### Part 0: Create an OpenMined directory (to hold all your OM projects)
 Start by creating a general directory for your OpenMined projects. In that directory, run the following commands. 
+> mkdir OpenMined
 
 #### Part 1: Check that python 3.5 is activated
 >python --version
@@ -50,11 +52,22 @@ If you don't currently have python 3.5 activated, run the following command
 
 >source activate py35
 
-#### Part 3: Install and Build
+#### Part 3: Fork PySyft an OpenMined Repositories
 
-> git clone https://github.com/OpenMined/OpenMined.git
+- Go to the following link: [https://github.com/OpenMined/OpenMined](https://github.com/OpenMined/OpenMined)
+- Click the "Fork" button at the top right corner.
+![](../resources/images/fork.png)
+- Go to the following link: [https://github.com/OpenMined/OpenMined](https://github.com/OpenMined/PySyft)
+- Clik the "Fork" button at the top right corner (yes this is a second time)
+
+This will copy our repositories YOUR github account. Now, you want to clone those repositories to your OpenMined project directory that you created in Part 1.
+
+> git clone https://github.com/`<your github username>`/OpenMined.git
  
-> git clone https://github.com/OpenMined/PySyft
+> git clone https://github.com/`<your github username>`/PySyft.git
+
+#### Part 4: Install and Build
+
 
 > cd PySyft
 
