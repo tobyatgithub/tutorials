@@ -1,6 +1,6 @@
 # Windows - Setting up your Dev Environment
 
-In this document, we're going to condense how you should setup your machine in preparation for the rest of the tutorials contained in this document. Running OpenMined means having several different applications and repositories correctly installed and ready to work together, which can have unique challenges for each system. To that end, let's get your Windows up and running!!!
+In this document, we're going to condense how you should setup your machine in preparation for the rest of the tutorials contained in this document. Running OpenMined means having several different applications and repositories correctly installed and ready to work together, which can have unique challenges for each system. To that end, let's get your PC up and running!!!
 
 # Step 1: Install Unity
 
@@ -26,13 +26,15 @@ If you installed Anaconda, you have already installed jupyter notebook! If you d
 
 Start by creating a general directory for your OpenMined projects. In that directory, run the following commands. 
 
-#### Part 1: Clone
+#### Part 1: Fork & Clone
 
-This can be completed in Git bash if you have that installed or where ever you have Git installed. Here's how to clone from Git bash.
+At this point if you're planning on contributing back to the project its best to fork the repo on Github. Navigate to [OpenMined Repo](https://github.com/OpenMined/OpenMined.git) and click the Fork button. Repeat the same process for the [PySyft Repo](https://github.com/OpenMined/PySyft).
 
-> git clone https://github.com/OpenMined/OpenMined.git
+Now clone! This can be completed in Git bash if you have that installed or where ever you have Git installed. Here's how to clone from Git bash. You might also need to set up public/private keys to clone in this way. See tutorial [here](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows).
+
+> git clone git@github.com:**YOUR-GITHUB-USERNAME-HERE**/OpenMined.git
  
-> git clone https://github.com/OpenMined/PySyft
+> git clone git@github.com:**YOUR-GITHUB-USERNAME-HERE**/PySyft.git
 
 #### Part 2: Build
 
