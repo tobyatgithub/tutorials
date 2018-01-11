@@ -18,21 +18,25 @@ I'll admit, this part can be annoying if you don't use the right tools. For OSX,
 #### Part 1: Install Anaconda
 First, navigate to the [OSX Anaconda Download Page](https://www.anaconda.com/download/#macos) and click "Download" for the Python 3.6 version.
 
-#### Part 2: Change to Python 3.5
-At the time of writing, PySyft is built against Python 3.5, so we'll want to change over to 3.5 even though anaconda downloads with 3.6 by default. Fortunately, anaconda includes a [Tutorial on how to do this](https://conda.io/docs/user-guide/tasks/manage-python.html).
+#### Part 2: Change to Python 3.6
+At the time of writing, PySyft is built against Python 3.6, so we'll want to change over to 3.6 . Fortunately, anaconda includes a [Tutorial on how to do this](https://conda.io/docs/user-guide/tasks/manage-python.html).
 
->conda create -n py35 python=3.5 anaconda
+First, see if you're already on 3.6
 
->source activate py35
+>python --version
 
-Now, when you run the following command, it should tell you "3.5"
+If it says 3.6, skip to Part 3!!
+
+>conda create -n py36 python=3.6 anaconda
+
+>source activate py36
+
+Now, when you run the following command, it should tell you "3.6"
 >python --version
 
 #### Part 3: Install Jupyter Notebook
 
 If you installed Anaconda, you have already installed jupyter notebook! If you did not, you'll need to use [these instructions](http://jupyter.readthedocs.io/en/latest/install.html) as a backup.
-
-
 
 # Step 3: Clone & Build Relevant Repositories
 
