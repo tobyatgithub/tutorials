@@ -1,6 +1,6 @@
-# OSX - Setting up your Dev Environment
+# Windows - Setting up your Dev Environment
 
-In this document, we're going to condense how you should setup your machine in preparation for the rest of the tutorials contained in this document. Running OpenMined means having several different applications and repositories correctly installed and ready to work together, which can have unique challenges for each system. To that end, let's get your Mac up and running!!!
+In this document, we're going to condense how you should setup your machine in preparation for the rest of the tutorials contained in this document. Running OpenMined means having several different applications and repositories correctly installed and ready to work together, which can have unique challenges for each system. To that end, let's get your Windows up and running!!!
 
 # Step 1: Install Unity
 
@@ -13,52 +13,34 @@ A few quick tips:
 
 # Step 2: Install Jupyter Notebook
 
-I'll admit, this part can be annoying if you don't use the right tools. For OSX, I've found that anaconda is the best installation tool for jupyter notbook. (READ: don't use pip...pip is unreliable for installing jupyter notebook. Sometimes it works, sometimes it totally screws up your system). 
+I'll admit, this part can be annoying if you don't use the right tools. For Windows, I've found that anaconda is the best installation tool for jupyter notbook. (READ: don't use pip...pip is unreliable for installing jupyter notebook. Sometimes it works, sometimes it totally screws up your system). 
 
 #### Part 1: Install Anaconda
-First, navigate to the [OSX Anaconda Download Page](https://www.anaconda.com/download/#macos) and click "Download" for the Python 3.6 version.
+First, navigate to the [Windows Anaconda Download Page](https://www.anaconda.com/download/#windows) and click "Download" for the Python 3.6 version.
 
-#### Part 2: Change to Python 3.6
-At the time of writing, PySyft is built against Python 3.6, so we'll want to change over to 3.6 . Fortunately, anaconda includes a [Tutorial on how to do this](https://conda.io/docs/user-guide/tasks/manage-python.html).
-
-First, see if you're already on 3.6
-
->python --version
-
-If it says 3.6, skip to Part 3!!
-
->conda create -n py36 python=3.6 anaconda
-
->source activate py36
-
-Now, when you run the following command, it should tell you "3.6"
->python --version
-
-#### Part 3: Install Jupyter Notebook
+#### Part 2: Install Jupyter Notebook
 
 If you installed Anaconda, you have already installed jupyter notebook! If you did not, you'll need to use [these instructions](http://jupyter.readthedocs.io/en/latest/install.html) as a backup.
+
+
 
 # Step 3: Clone & Build Relevant Repositories
 
 Start by creating a general directory for your OpenMined projects. In that directory, run the following commands. 
 
-#### Part 1: Check that python 3.5 is activated
->python --version
+#### Part 1: Clone
 
-#### Part 2: If needed, activate python 3.5
-If you don't currently have python 3.5 activated, run the following command
-
->source activate py35
-
-#### Part 3: Install and Build
+This can be completed in Git bash if you have that installed or where ever you have Git installed. Here's how to clone from Git bash.
 
 > git clone https://github.com/OpenMined/OpenMined.git
  
 > git clone https://github.com/OpenMined/PySyft
 
+#### Part 2: Build
+
 > cd PySyft
 
-> pip3 install -r requirements.txt
+> ./install_for_anaconda_windows.bat?????
 
 > python3 setup.py install
 
@@ -67,6 +49,10 @@ If you don't currently have python 3.5 activated, run the following command
 If you have any trouble with the installation of PySyft, debug using the [README](https://github.com/OpenMined/PySyft).
 
 # Step 4: Start Jupyter Notebook
+
+This part can be run from your choice of commandline as long as the commandline has access to the anaconda commands. This can be set up in many different ways. The easiest way I found was to open the Anaconda commandline. It already has access to the proper commands!
+
+TODO: image to Anaconda commandline
 
 From your general directory (containing both your OpenMined and PySyft folders), run the following command.
 
@@ -84,34 +70,34 @@ Find where Unity installed and start the application.
 
 Unity will ask you which project you want to open. You want to select the folder "UnityProject" within the [https://github.com/OpenMined/OpenMined](https://github.com/OpenMined/OpenMined) project. 
 
-![](../resources/images/OpenUnityProject.png)
+![](../resources/images/OpenUnityProject.png) TODO image from windows
 
 #### Part 3: Double-click Assets/OpenMinedMain
 
 In the project pane, in the "Assets" folder, double click the unity scene (little file with the unity logo next to it) called "OpenMinedMain".
 
-![](../resources/images/SelectUnityScene.png)
+![](../resources/images/SelectUnityScene.png) TODO image from windows
 
 #### Part 4: Make sure SyftServer is properly attached to the FloatTensorShaders file.
 
 In the `Hierarchy` pane, click the `Main Camera`. 
 
-![](../resources/images/HierarchyMainCamera.png)
+![](../resources/images/HierarchyMainCamera.png) TODO image from windows
 
 Then, in the `Inspector` pane (towards the bottom), you should see a `Syft Server (script)` inside of which is a textarea labeled `Shader`. The contents of this text area should say `FloatTensorShaders` like pictured below.
 
-![](../resources/images/CameraInspector.png)
+![](../resources/images/CameraInspector.png) TODO image from windows
 
 If you don't see `Syft Server Script` in the inspector pane, drag the file Assets/OpenMined/Network/Servers/SyftServer and drop it into the inspector as pictured below.
 
-![](../resources/images/DragSyftServer.png)
+![](../resources/images/DragSyftServer.png) TODO image from windows
 
 If you DO see the `Syft Server Script` but `FloatTensorShaders` is NOT in the `Shader` area (if area will is grayed out and say `None (ComputeShader)`. Drag the file Assets/OpenMined/Syft/Tensor/Ops/Shaders/FloatTensorShaders into that text area like seen below.
 
-![](../resources/images/DragShader.png)
+![](../resources/images/DragShader.png) TODO image from windows
 
 #### Part 5: Press Play!!!
 
 At the top of the Unity application there's a Play button. Press it! This will start the OpenMined server and you'll be ready to start doing some tutorials!!
 
-![](../resources/images/UnityPlayButton.png)
+![](../resources/images/UnityPlayButton.png) TODO image from windows
