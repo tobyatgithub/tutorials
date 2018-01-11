@@ -22,8 +22,6 @@ First, navigate to the [Windows Anaconda Download Page](https://www.anaconda.com
 
 If you installed Anaconda, you have already installed jupyter notebook! If you did not, you'll need to use [these instructions](http://jupyter.readthedocs.io/en/latest/install.html) as a backup.
 
-
-
 # Step 3: Clone & Build Relevant Repositories
 
 Start by creating a general directory for your OpenMined projects. In that directory, run the following commands. 
@@ -38,9 +36,13 @@ This can be completed in Git bash if you have that installed or where ever you h
 
 #### Part 2: Build
 
+From here I'd recommend using the Anaconda commandline. Might not be the best interface but I found it the easiest way to get access to python and Anaconda commandline tools without to much fuss!
+
+TODO: image to Anaconda commandline
+
 > cd PySyft
 
-> ./install_for_anaconda_windows.bat?????
+> ./install_for_anaconda_windows.bat TODO: what is the actual way to run this?
 
 > python3 setup.py install
 
@@ -49,10 +51,6 @@ This can be completed in Git bash if you have that installed or where ever you h
 If you have any trouble with the installation of PySyft, debug using the [README](https://github.com/OpenMined/PySyft).
 
 # Step 4: Start Jupyter Notebook
-
-This part can be run from your choice of commandline as long as the commandline has access to the anaconda commands. This can be set up in many different ways. The easiest way I found was to open the Anaconda commandline. It already has access to the proper commands!
-
-TODO: image to Anaconda commandline
 
 From your general directory (containing both your OpenMined and PySyft folders), run the following command.
 
