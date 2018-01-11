@@ -10,14 +10,14 @@ The issues for our IntTensor live in the Python client, PySyft. So, we're going 
 
 Now, we're specifically interested in looking for issues requiring GPU functionality, so we're going to click the `Lables` dropdown and click the `needs GPU` label to filter the big list of issues down to ones requiring GPU functionality. At the time of writing, that looks like the following.
 
-![](../resources/images/needsGpu.png)
+![](../resources/images/NeedsGpu.png)
 
 Let's click the top issue and read a bit.
 
-![](../resources/images/issueConvoTop.png)
+![](../resources/images/IssueConvoTop.png)
 
 Looks like someone has already gotten started on this issue but no-one has started workinig on the GPU functionality yet. In fact, the last guy to comment was the person who added the "needs GPU" label, which means he's probably not working on that. However, before jumping in, I should check to make sure and offer to help.
 
-![](../resources/images/issueConvoBottom.png)
+![](../resources/images/IssueConvoBottom.png)
 
 And we're in business!!! (in that conversation my username is "iamtrask"). 
