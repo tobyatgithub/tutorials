@@ -1,5 +1,5 @@
 # OSX - Setting up your Dev Environment
--
+
 In this document, we're going to condense how you should setup your machine in preparation for the rest of the tutorials contained in this document. Running OpenMined means having several different applications and repositories correctly installed and ready to work together, which can have unique challenges for each system. To that end, let's get your Mac up and running!!!
 
 # Step 1: Install Unity
@@ -28,6 +28,11 @@ At the time of writing, PySyft is built against Python 3.5, so we'll want to cha
 Now, when you run the following command, it should tell you "3.5"
 >python --version
 
+#### Part 3: Install Jupyter Notebook
+
+If you installed Anaconda, you have already installed jupyter notebook! If you did not, you'll need to use [these instructions](http://jupyter.readthedocs.io/en/latest/install.html) as a backup.
+
+
 
 # Step 3: Clone & Build Relevant Repositories
 
@@ -53,6 +58,32 @@ If you don't currently have python 3.5 activated, run the following command
 
 > python3 setup.py install
 
+> cd ../
+
 If you have any trouble with the installation of PySyft, debug using the [README](https://github.com/OpenMined/PySyft).
 
+# Step 4: Start Jupyter Notebook
 
+From your general directory (containing both your OpenMined and PySyft folders), run the following command.
+
+>jupyter notebook
+
+This should start the jupyer notebook server and automatically open your browser to the main jupyter notebook folder.
+
+# Step 5: Start OpenMined Unity Application
+
+#### Part 1: Start Unity Application
+
+Find where Unity installed and start the application.
+
+#### Part 2: Select OpenMined/UnityProject
+
+Unity will ask you which project you want to open. You want to select the folder "UnityProject" within the [https://github.com/OpenMined/OpenMined](https://github.com/OpenMined/OpenMined) project. 
+
+#### Part 3: Double-click Assets/OpenMinedMain
+
+In the project pane, in the "Assets" folder, double click the unity scene (little file with the unity logo next to it) called "OpenMinedMain".
+
+#### Part 4: Press Play!!!
+
+At the top of the Unity application there's a Play button. Press it! This will start the OpenMined server and you'll be ready to start doing some tutorials!!
