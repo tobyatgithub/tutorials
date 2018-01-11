@@ -32,9 +32,9 @@ At this point if you're planning on contributing back to the project its best to
 
 Now clone! This can be completed in Git bash if you have that installed or where ever you have Git installed. Here's how to clone from Git bash. You might also need to set up public/private keys to clone in this way. See tutorial [here](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows).
 
-> git clone git@github.com:**YOUR-GITHUB-USERNAME-HERE**/OpenMined.git
+`git clone git@github.com:**YOUR-GITHUB-USERNAME-HERE**/OpenMined.git`
  
-> git clone git@github.com:**YOUR-GITHUB-USERNAME-HERE**/PySyft.git
+`git clone git@github.com:**YOUR-GITHUB-USERNAME-HERE**/PySyft.git`
 
 #### Part 2: Build
 
@@ -42,13 +42,13 @@ From here I'd recommend using the Anaconda commandline. Might not be the best in
 
 TODO: image to Anaconda commandline
 
-> cd PySyft
+`cd PySyft`
 
-> ./install_for_anaconda_windows.bat TODO: what is the actual way to run this?
+`./install_for_anaconda_windows.bat` TODO: what is the actual way to run this?
 
-> python3 setup.py install
+`python3 setup.py install`
 
-> cd ../
+`cd ../`
 
 If you have any trouble with the installation of PySyft, debug using the [README](https://github.com/OpenMined/PySyft).
 
@@ -56,7 +56,7 @@ If you have any trouble with the installation of PySyft, debug using the [README
 
 From your general directory (containing both your OpenMined and PySyft folders), run the following command.
 
->jupyter notebook
+`jupyter notebook`
 
 This should start the jupyer notebook server and automatically open your browser to the main jupyter notebook folder.
 
