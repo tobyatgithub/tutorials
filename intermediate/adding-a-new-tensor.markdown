@@ -73,7 +73,7 @@ Since we're adding a method to `IntTensor`, the code for the interface is in Ope
 
 ## The Unity Test
 
-https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined.Tests/Editor/FloatTensorTest.cs
+https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined.Tests/Editor/FloatTensor/FloatTensorTest.cs
 
 ## Syft Controller
 
@@ -81,7 +81,7 @@ https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined
 
 ## GPU Code
 
-https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Math/Shaders/FloatTensorShaders.compute
+https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/Ops/Shaders/FloatTensorShaders.compute
 https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.ShaderOps.cs
 
 ## CPU Code
