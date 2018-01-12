@@ -79,19 +79,40 @@ Take a look at the pull request to see how this was done.
 
 By moving `__add__` into `BaseTensor` we now have our PySyft interface implemented for the `IntTensor` class.
 
-## The Unity Test (C#)
+## The PySyft Test (Python)
 
-https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined.Tests/Editor/FloatTensor/FloatTensorTest.cs
+We'll want to be extra careful that we didn't break anything. We can jump into a Jupyter notebook to test our new operation.
+
+Checkout [the notebook for this tutorial](https://github.com/OpenMined/tutorials/blob/master/intermediate/adding-a-new-tensor.ipynb).
+
+We want to test:
+
+* The `+` op for `FloatTensor`
+* The `+` op for `IntTensor`
+
+You can open Jupyter from the tutorials dir to run it:
+
+```bash
+jupyter notebook
+```
+
+`FloatTensor` addition should already work. But our new `IntTensor` addition will not work until we implement the Unity backend. Let's start by writing the Unity tests...
+
+## The Unity Tests (C#)
+
+The Unity tests are located in the [OpenMined](/OpenMined/OpenMined) repo under [/UnityProject/Assets/OpenMined.Tests/Editor](https://github.com/OpenMined/OpenMined/tree/master/UnityProject/Assets/OpenMined.Tests/Editor).
+
+Similar to PySyft, the `FloatTensor` class in Unity already had an `Add` method implemented. So we can base our `IntTensor` tests off of that. At the time of writing, there was no file for the `IntTensor` tests. You can see how we created [a new test class for IntTensor](https://github.com/OpenMined/OpenMined/pull/319/commits/b07bfccc643f84c74c380962cf7ce7204a833437) by looking at the original commit.
 
 ## Syft Controller (C#)
 
 https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Network/Controllers/SyftController.cs
 
+## CPU Code (C#)
+
+https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.ShaderOps.cs
+
 ## GPU Code (HLSL)
 
 https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/Ops/Shaders/FloatTensorShaders.compute
-https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.ShaderOps.cs
-
-## CPU Code (C#)
-
 https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.ShaderOps.cs
