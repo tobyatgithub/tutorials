@@ -42,7 +42,7 @@ Now clone! This can be completed in Git bash if you have that installed or where
 
 From here I'd recommend using the Anaconda Prompt. Might not be the best interface but I found it the easiest way to get access to python and Anaconda command line tools without to much fuss!
 
-![](../resources/images/anaconda_prompt_windows.png)
+![](../resources/images/anaconda_prompt_windows.PNG)
 
 `cd PySyft`
 
@@ -72,19 +72,19 @@ Find where Unity installed and start the application.
 
 Unity will ask you which project you want to open. You want to select the folder "UnityProject" within the [https://github.com/OpenMined/OpenMined](https://github.com/OpenMined/OpenMined) project.
 
-![](../resources/images/open_unity_project_windows.png)
+![](../resources/images/open_unity_project_windows.PNG)
 
 #### Part 3: Double-click Assets/OpenMinedMain
 
 In the project pane, in the "Assets" folder, double click the unity scene (little file with the unity logo next to it) called "OpenMinedMain".
 
-![](../resources/images/scene_open_windows.png)
+![](../resources/images/scene_open_windows.PNG)
 
 #### Part 4: Make sure SyftServer is properly attached to the FloatTensorShaders file.
 
 In the `Hierarchy` pane, click the `Main Camera`.
 
-![](../resources/images/HierarchyMainCamera.png)
+![](../resources/images/main_camera_windows.PNG)
 
 Then, in the `Inspector` pane (towards the bottom), you should see a `Syft Server (script)` inside of which is a textarea labeled `Shader`. The contents of this text area should say `FloatTensorShaders` like pictured below.
 
@@ -92,11 +92,11 @@ Then, in the `Inspector` pane (towards the bottom), you should see a `Syft Serve
 
 If you don't see `Syft Server Script` in the inspector pane, drag the file Assets/OpenMined/Network/Servers/SyftServer and drop it into the inspector as pictured below.
 
-![](../resources/images/syft_server_small.png)
+![](../resources/images/syft_server_small.PNG)
 
 If you DO see the `Syft Server Script` but `FloatTensorShaders` is NOT in the `Shader` area (if area will is grayed out and say `None (ComputeShader)`. Drag the file Assets/OpenMined/Syft/Tensor/Ops/Shaders/FloatTensorShaders into that text area like seen above.
 
-![](../resources/images/floattensor_shader_small.png)
+![](../resources/images/floattensor_shader_small.PNG)
 
 #### Part 5: Press Play!!!
 
