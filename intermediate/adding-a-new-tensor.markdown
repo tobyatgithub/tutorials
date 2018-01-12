@@ -27,15 +27,49 @@ First we want to search GitHub for a "good first issue": https://github.com/Open
 
 This will give us a big list of tensor methods that haven't been implemented yet.
 
-To keep this tutorial simple, and to provide a real world reference, we'll chose a method that has already been implemented: Inline Add.
+To keep this tutorial simple, and to provide a real world reference, we'll chose a method that has already been implemented: IntTensor Add.
 
-If you just want to code:
+If you just to see the finished code:
 
-* Original issue: https://github.com/OpenMined/PySyft/issues/414
-* PySyft pull request (Python interface code): https://github.com/OpenMined/PySyft/pull/635
-* OpenMined pull request (Unity CPU/GPU code): https://github.com/OpenMined/OpenMined/pull/63/files
+* Original issue: https://github.com/OpenMined/PySyft/issues/755
+* PySyft pull request (Python interface code): _
+* OpenMined pull request (Unity CPU/GPU code): _
 
-## The Python interface
+## Forking PySyft
+
+We need to implement the PySyft interface for our tensor method.
+
+The PySyft repo is https://github.com/OpenMined/PySyft . If you're not already setup you can `git clone` and follow the local setup instructions on the readme:
+
+```bash
+git clone git@github.com:OpenMined/PySyft.git
+```
+
+You should fork the PySyft repo so that you can send a pull request later.
+
+On the PySyft repo in GitHub, click the `Fork` button.
+
+Now back in the terminal you can `git remote add` to add the url of your personal PySyft fork. Mine is https://github.com/gavinuhma/PySyft , so the terminal command looks like below. Just change `gavinuhma` to your github username. I like to give my remote forks the name `fork` (Seems fitting!)
+
+```bash
+git remote add fork git@github.com:gavinuhma/PySyft.git
+```
+
+To verify, you can list your remotes with `git remote`.
+
+```bash
+git remote
+```
+
+If you cloned PySyft a while ago, you can push to your fork to get it up to date with master.
+
+```bash
+git push fork master
+```
+
+## The PySyft interface (Python)
+
+Since we're adding a method to `IntTensor`, the code for the interface is in OpenMined/PySyft/syft/tensor.py
 
 ## The Unity Test
 
