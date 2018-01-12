@@ -82,19 +82,8 @@ Start by creating a general directory for your OpenMined projects. In that direc
 mkdir OpenMined
 ```
 
-#### Part 1: Check that python 3.5 is activated
-```
-python --version
-```
-
-#### Part 2: If needed, activate python 3.5
-If you don't currently have python 3.5 activated, run the following command
-```
-source activate py35
-```
-
-#### Part 3: Fork PySyft an OpenMined Repositories
-
+#### Part 1: Fork PySyft an OpenMined Repositories
+/github.com/OpenMined/OpenMined](h
 - Go to the following link: [https://github.com/OpenMined/OpenMined](https://github.com/OpenMined/OpenMined)
 - Click the "Fork" button at the top right corner.
 ![](../resources/images/fork.png)
@@ -107,7 +96,7 @@ git clone git@github.com:OpenMined/OpenMined.git
 git clone https://github.com/<your github username>/PySyft.git
 ```
 
-#### Part 4: Install and Build
+#### Part 2: Install and Build
 ```
 cd PySyft
 pip install -r requirements.txt
@@ -117,7 +106,7 @@ cd ../
 
 If you have any trouble with the installation of PySyft, debug using the [README](https://github.com/OpenMined/PySyft).
 
-# Step 4: Start Jupyter Notebook
+# Step 3: Start Jupyter Notebook
 
 From your general directory (containing both your OpenMined and PySyft folders), run the following command.
 
@@ -127,7 +116,7 @@ jupyter notebook
 
 This should start the jupyer notebook server and automatically open your browser to the main jupyter notebook folder.
 
-# Step 5: Start OpenMined Unity Application
+# Step 4: Start OpenMined Unity Application
 
 #### Part 1: Start Unity Application
 
