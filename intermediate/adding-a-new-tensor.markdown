@@ -104,15 +104,31 @@ The Unity tests are located in the [OpenMined](/OpenMined/OpenMined) repo under 
 
 Similar to PySyft, the `FloatTensor` class in Unity already had an `Add` method implemented. So we can base our `IntTensor` tests off of that. At the time of writing, there was no file for the `IntTensor` tests. You can see how we created [a new test class for IntTensor](https://github.com/OpenMined/OpenMined/pull/319/commits/b07bfccc643f84c74c380962cf7ce7204a833437) by looking at the original commit.
 
-## Syft Controller (C#)
-
-https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Network/Controllers/SyftController.cs
-
 ## CPU Code (C#)
 
-https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.ShaderOps.cs
+In the [OpenMined](/OpenMined/OpenMined) repo open [/UnityProject/Assets/OpenMined/Syft/Tensor/IntTensor.cs](https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/IntTensor.cs). This is the `IntTensor` class where we can add new operations.
+
+Look for the `ProcessMessage` method. `ProcessMessage` is handling the commands sent over the socket connection from `PySyft`.
+
+Also open [/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.cs](https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.cs).
+
+In the `FloatTensor` class you'll see another `ProcessMessage` method. There are 4 cases in the switch statement in `FloatTensor` that we need to copy over to `IntTensor`:
+
+1. `add_elem`
+2. `add_elem_`
+3. `add_scalar`
+4. `add_scalar_`
+
+The `_` appended to two of those methods means `inline`.
+
+You'll also see that the implementations for these call the `Add` method.
+
+Open [/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.Ops.cs](https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.Ops.cs) to see the implementation of the `Add` method.
+
+We need to copy `Add` from `FloatTensor` over to `IntTensor`.
+
+NOTE: We want to continue to expand the `BaseTensor` class wherever possible. So if you have ideas for ways to reduce the amount of repetitive code between `IntTensor` and `FloatTensor` we'd welcome the contribution! Write some tests first so you can be sure that nothing gets broken in the refactoring! :) Or feel free to create an issue with the `discussion` label on GitHub.
 
 ## GPU Code (HLSL)
 
-https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/Ops/Shaders/FloatTensorShaders.compute
-https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.ShaderOps.cs
+Work in progress.
