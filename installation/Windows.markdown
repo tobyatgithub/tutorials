@@ -40,13 +40,13 @@ Now clone! This can be completed in Git bash if you have that installed or where
 
 #### Part 2: Build
 
-From here I'd recommend using the Anaconda commandline. Might not be the best interface but I found it the easiest way to get access to python and Anaconda commandline tools without to much fuss!
+From here I'd recommend using the Anaconda Prompt. Might not be the best interface but I found it the easiest way to get access to python and Anaconda command line tools without to much fuss!
 
-TODO: image to Anaconda commandline
+![](../resources/images/anaconda_prompt_windows.png)
 
 `cd PySyft`
 
-`./install_for_anaconda_windows.bat` TODO: what is the actual way to run this?
+`install_for_anaconda_on_windows.bat`
 
 `python3 setup.py install`
 
@@ -78,7 +78,7 @@ Unity will ask you which project you want to open. You want to select the folder
 
 In the project pane, in the "Assets" folder, double click the unity scene (little file with the unity logo next to it) called "OpenMinedMain".
 
-![](../resources/images/scene_open_windows.png) TODO image from windows
+![](../resources/images/scene_open_windows.png)
 
 #### Part 4: Make sure SyftServer is properly attached to the FloatTensorShaders file.
 
