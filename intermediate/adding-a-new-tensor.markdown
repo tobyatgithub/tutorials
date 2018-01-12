@@ -69,21 +69,29 @@ git push fork master
 
 ## The PySyft interface (Python)
 
-Since we're adding a method to `IntTensor`, the code for the interface is in OpenMined/PySyft/syft/tensor.py
+Since we're adding a method to `IntTensor`, the code for the interface is in the [PySyft](/OpenMined/PySyft) repo under [syft/tensor.py](/OpenMined/PySyft/blob/master/syft/tensor.py).
 
-## The Unity Test
+You'll notice the method is called `__add__`. This is a ["magic method"](https://www.python-course.eu/python3_magic_methods.php) that allows us to overload the `+` operator.
+
+There was already an `__add__` method for the `FloatTensor` class. In this case, the only difference between the two classes are the `int` vs `float` values. So it's fairly easy for us to subclass the `IntTensor` and `FloatTensor` from a `BaseTensor` class.
+
+Take a look at the pull request to see how this was done.
+
+By moving `__add__` into `BaseTensor` we now have our PySyft interface implemented for the `IntTensor` class.
+
+## The Unity Test (C#)
 
 https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined.Tests/Editor/FloatTensorTest.cs
 
-## Syft Controller
+## Syft Controller (C#)
 
 https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Network/Controllers/SyftController.cs
 
-## GPU Code
+## GPU Code (HLSL)
 
 https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Math/Shaders/FloatTensorShaders.compute
 https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.ShaderOps.cs
 
-## CPU Code
+## CPU Code (C#)
 
 https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.ShaderOps.cs
