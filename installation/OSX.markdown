@@ -44,13 +44,13 @@ If you installed Anaconda, you have already installed jupyter notebook! If you d
 Start by creating a general directory for your OpenMined projects. In that directory, run the following commands.
 > mkdir OpenMined
 
-#### Part 1: Check that python 3.5 is activated
+#### Part 1: Check that python 3.6 is activated
 >python --version
 
-#### Part 2: If needed, activate python 3.5
-If you don't currently have python 3.5 activated, run the following command
+#### Part 2: If needed, activate python 3.6
+If you don't currently have python 3.6 activated, run the following command
 
->source activate py35
+>source activate py36
 
 #### Part 3: Fork PySyft an OpenMined Repositories
 
