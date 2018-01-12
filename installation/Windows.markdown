@@ -13,7 +13,7 @@ A few quick tips:
 
 # Step 2: Install Jupyter Notebook
 
-I'll admit, this part can be annoying if you don't use the right tools. For Windows, I've found that anaconda is the best installation tool for jupyter notbook. (READ: don't use pip...pip is unreliable for installing jupyter notebook. Sometimes it works, sometimes it totally screws up your system). 
+I'll admit, this part can be annoying if you don't use the right tools. For Windows, I've found that anaconda is the best installation tool for jupyter notbook. (READ: don't use pip...pip is unreliable for installing jupyter notebook. Sometimes it works, sometimes it totally screws up your system).
 
 #### Part 1: Install Anaconda
 First, navigate to the [Windows Anaconda Download Page](https://www.anaconda.com/download/#windows) and click "Download" for the Python 3.6 version.
@@ -24,27 +24,29 @@ If you installed Anaconda, you have already installed jupyter notebook! If you d
 
 # Step 3: Clone & Build Relevant Repositories
 
-Start by creating a general directory for your OpenMined projects. In that directory, run the following commands. 
+Start by creating a general directory for your OpenMined projects. In that directory, run the following commands.
 
 #### Part 1: Fork & Clone
 
 At this point if you're planning on contributing back to the project its best to fork the repo on Github. Navigate to [OpenMined Repo](https://github.com/OpenMined/OpenMined.git) and click the Fork button. Repeat the same process for the [PySyft Repo](https://github.com/OpenMined/PySyft).
 
+![](../resources/images/fork.png)
+
 Now clone! This can be completed in Git bash if you have that installed or where ever you have Git installed. Here's how to clone from Git bash. You might also need to set up public/private keys to clone in this way. See tutorial [here](https://help.github.com/articles/adding-a-new-ssh-key-to-your-github-account/#platform-windows).
 
 `git clone git@github.com:**YOUR-GITHUB-USERNAME-HERE**/OpenMined.git`
- 
+
 `git clone git@github.com:**YOUR-GITHUB-USERNAME-HERE**/PySyft.git`
 
 #### Part 2: Build
 
-From here I'd recommend using the Anaconda commandline. Might not be the best interface but I found it the easiest way to get access to python and Anaconda commandline tools without to much fuss!
+From here I'd recommend using the Anaconda Prompt. Might not be the best interface but I found it the easiest way to get access to python and Anaconda command line tools without to much fuss!
 
-TODO: image to Anaconda commandline
+![](../resources/images/anaconda_prompt_windows.png)
 
 `cd PySyft`
 
-`./install_for_anaconda_windows.bat` TODO: what is the actual way to run this?
+`install_for_anaconda_on_windows.bat`
 
 `python3 setup.py install`
 
@@ -68,36 +70,36 @@ Find where Unity installed and start the application.
 
 #### Part 2: Select OpenMined/UnityProject
 
-Unity will ask you which project you want to open. You want to select the folder "UnityProject" within the [https://github.com/OpenMined/OpenMined](https://github.com/OpenMined/OpenMined) project. 
+Unity will ask you which project you want to open. You want to select the folder "UnityProject" within the [https://github.com/OpenMined/OpenMined](https://github.com/OpenMined/OpenMined) project.
 
-![](../resources/images/OpenUnityProject.png) TODO image from windows
+![](../resources/images/open_unity_project_windows.png)
 
 #### Part 3: Double-click Assets/OpenMinedMain
 
 In the project pane, in the "Assets" folder, double click the unity scene (little file with the unity logo next to it) called "OpenMinedMain".
 
-![](../resources/images/SelectUnityScene.png) TODO image from windows
+![](../resources/images/scene_open_windows.png)
 
 #### Part 4: Make sure SyftServer is properly attached to the FloatTensorShaders file.
 
-In the `Hierarchy` pane, click the `Main Camera`. 
+In the `Hierarchy` pane, click the `Main Camera`.
 
-![](../resources/images/HierarchyMainCamera.png) TODO image from windows
+![](../resources/images/HierarchyMainCamera.png)
 
 Then, in the `Inspector` pane (towards the bottom), you should see a `Syft Server (script)` inside of which is a textarea labeled `Shader`. The contents of this text area should say `FloatTensorShaders` like pictured below.
 
-![](../resources/images/CameraInspector.png) TODO image from windows
+![](../resources/images/CameraInspector.png)
 
 If you don't see `Syft Server Script` in the inspector pane, drag the file Assets/OpenMined/Network/Servers/SyftServer and drop it into the inspector as pictured below.
 
-![](../resources/images/DragSyftServer.png) TODO image from windows
+![](../resources/images/syft_server_small.png)
 
-If you DO see the `Syft Server Script` but `FloatTensorShaders` is NOT in the `Shader` area (if area will is grayed out and say `None (ComputeShader)`. Drag the file Assets/OpenMined/Syft/Tensor/Ops/Shaders/FloatTensorShaders into that text area like seen below.
+If you DO see the `Syft Server Script` but `FloatTensorShaders` is NOT in the `Shader` area (if area will is grayed out and say `None (ComputeShader)`. Drag the file Assets/OpenMined/Syft/Tensor/Ops/Shaders/FloatTensorShaders into that text area like seen above.
 
-![](../resources/images/DragShader.png) TODO image from windows
+![](../resources/images/floattensor_shader_small.png)
 
 #### Part 5: Press Play!!!
 
 At the top of the Unity application there's a Play button. Press it! This will start the OpenMined server and you'll be ready to start doing some tutorials!!
 
-![](../resources/images/UnityPlayButton.png) TODO image from windows
+![](../resources/images/UnityPlayButton.png)
