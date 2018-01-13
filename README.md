@@ -1,13 +1,10 @@
 # Tutorials
 [![Chat on Slack](https://img.shields.io/badge/chat-on%20slack-7A5979.svg)](https://openmined.slack.com/messages/beginner)
 
-> OpenMined is an unincorporated, volunteer-only open source project to provide federated machine learning using blockchain technology.
-
-This repository provides tutorial code to explore and learn various projects in the openmined ecosystem.
+This repository includes step-by-step tutorials for using and adding to functionality within the OpenMined ecosystem. Before you begin, you should start by completing our [OSX](https://github.com/OpenMined/tutorials/blob/master/installation/OSX.markdown) or [Windows](https://github.com/OpenMined/tutorials/blob/master/installation/Windows.markdown) installation guides which will get you setup and ready to complete the tutorials. If you get stuck, the best place to ask questions is in the #beginner slack channel which you can reach by clicking the Slack button above this paragraph.
 
 <!-- TOC depthFrom:2 -->
 
-- [Prerequisites](#prerequisites)
 - [Contents](#contents)
     - [Basics](#Basics)
     - [Intermediate](#Intermediate)
@@ -16,26 +13,15 @@ This repository provides tutorial code to explore and learn various projects in 
 - [Community](#Community)
 - [License](#License)
 
-<!-- /TOC -->
-
-## Prerequisites
-
-- Make sure Python 3.5+ is installed on your machine by checking `python3 --version`
-- Install pysyft by following the instructions listed over [here](https://github.com/OpenMined/PySyft/blob/master/README.md)
-- Install pysonar by following the instructions listed over [here](https://github.com/OpenMined/PySonar/blob/master/README.md)
-- Install OpenMined unity app by following the instructions listed over [here](https://github.com/OpenMined/OpenMined/blob/master/README.md)
-
-*note*: currently we are working on the updated tutorials with the new Unity Backend for pysyft, However If you want to try the old tutorials you also need to install the deprecated pysyft & capsule libraries by following the instructions over [here](https://github.com/OpenMined/Deprecated-PySyft) and [here](https://github.com/OpenMined/Deprecated-Capsule)
-
 
 ## Contents
 
-### [Basics](https://github.com/OpenMined/tutorials/tree/master/beginner) [WIP]
-- [Pysonar-Decentralized model training simulation (deprecated)](https://github.com/OpenMined/tutorials/blob/master/beginner/DEPRECATEDPysonar-Decentralized%20model%20training%20simulation.ipynb)
-- [Pysyft-Paillier Homographic Encrypted Linear Classification (deprecated)](https://github.com/OpenMined/tutorials/blob/master/beginner/DEPRECATED-Pysyft-Paillier%20Homographic%20Encrypted%20Linear%20Classification.ipynb)
-### [Intermediate]() [WIP]
-### [Advanced]() [WIP]
-
+### [Basics](https://github.com/OpenMined/tutorials/tree/master/beginner)
+- [Train a Basic Neural Network (Keras Interface)](https://github.com/OpenMined/tutorials/blob/master/beginner/Keras%20Neural%20Net.ipynb)
+### [Intermediate]()
+- [How to Add a (CPU-powered) Function to a Tensor](https://github.com/OpenMined/tutorials/blob/master/intermediate/adding-a-new-tensor.markdown)
+### [Advanced]()
+- [How to add a (GPU-powered) Function to a Tensor](https://github.com/OpenMined/tutorials/blob/master/advanced/gpu_functionality.markdown)
 
 ## For Contributors
 

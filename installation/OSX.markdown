@@ -13,7 +13,7 @@ A few quick tips:
 
 # Step 2: Install Jupyter Notebook
 
-I'll admit, this part can be annoying if you don't use the right tools. For OSX, I've found that anaconda is the best installation tool for jupyter notbook. (READ: don't use pip...pip is unreliable for installing jupyter notebook. Sometimes it works, sometimes it totally screws up your system). 
+I'll admit, this part can be annoying if you don't use the right tools. For OSX, I've found that anaconda is the best installation tool for jupyter notbook. (READ: don't use pip...pip is unreliable for installing jupyter notebook. Sometimes it works, sometimes it totally screws up your system).
 
 #### Part 1: Install Anaconda
 First, navigate to the [OSX Anaconda Download Page](https://www.anaconda.com/download/#macos) and click "Download" for the Python 3.6 version.
@@ -41,29 +41,29 @@ If you installed Anaconda, you have already installed jupyter notebook! If you d
 # Step 3: Fork, Clone & Build Relevant Repositories
 
 #### Part 0: Create an OpenMined directory (to hold all your OM projects)
-Start by creating a general directory for your OpenMined projects. In that directory, run the following commands. 
+Start by creating a general directory for your OpenMined projects. In that directory, run the following commands.
 > mkdir OpenMined
 
-#### Part 1: Check that python 3.5 is activated
+#### Part 1: Check that python 3.6 is activated
 >python --version
 
-#### Part 2: If needed, activate python 3.5
-If you don't currently have python 3.5 activated, run the following command
+#### Part 2: If needed, activate python 3.6
+If you don't currently have python 3.6 activated, run the following command
 
->source activate py35
+>source activate py36
 
 #### Part 3: Fork PySyft an OpenMined Repositories
 
 - Go to the following link: [https://github.com/OpenMined/OpenMined](https://github.com/OpenMined/OpenMined)
 - Click the "Fork" button at the top right corner.
 ![](../resources/images/fork.png)
-- Go to the following link: [https://github.com/OpenMined/OpenMined](https://github.com/OpenMined/PySyft)
+- Go to the following link: [https://github.com/OpenMined/PySyft](https://github.com/OpenMined/PySyft)
 - Clik the "Fork" button at the top right corner (yes this is a second time)
 
 This will copy our repositories YOUR github account. Now, you want to clone those repositories to your OpenMined project directory that you created in Part 1.
 
 > git clone https://github.com/`<your github username>`/OpenMined.git
- 
+
 > git clone https://github.com/`<your github username>`/PySyft.git
 
 #### Part 4: Install and Build
@@ -95,7 +95,7 @@ Find where Unity installed and start the application.
 
 #### Part 2: Select OpenMined/UnityProject
 
-Unity will ask you which project you want to open. You want to select the folder "UnityProject" within the [https://github.com/OpenMined/OpenMined](https://github.com/OpenMined/OpenMined) project. 
+Unity will ask you which project you want to open. You want to select the folder "UnityProject" within the [https://github.com/OpenMined/OpenMined](https://github.com/OpenMined/OpenMined) project.
 
 ![](../resources/images/OpenUnityProject.png)
 
@@ -107,7 +107,7 @@ In the project pane, in the "Assets" folder, double click the unity scene (littl
 
 #### Part 4: Make sure SyftServer is properly attached to the FloatTensorShaders file.
 
-In the `Hierarchy` pane, click the `Main Camera`. 
+In the `Hierarchy` pane, click the `Main Camera`.
 
 ![](../resources/images/HierarchyMainCamera.png)
 

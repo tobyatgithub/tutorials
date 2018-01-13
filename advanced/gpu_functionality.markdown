@@ -21,6 +21,7 @@ Looks like someone has already gotten started on this issue but no-one has start
 ![](../resources/images/IssueConvoBottom.png)
 
 And we're in business!!! (in that conversation my username is "iamtrask"). 
+<<<<<<< HEAD
 
 ## Step 2: Pull Down Gavin's Code Branch
 
@@ -106,3 +107,5 @@ Especially since we discovered bugs, we need to inform other participants of the
 ## Step 10: Party! We're done!
 
 Great job!
+=======
+>>>>>>> 65ec240bd71f433efb519a6f37e498d983d7c644

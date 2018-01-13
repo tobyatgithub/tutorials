@@ -27,29 +27,112 @@ First we want to search GitHub for a "good first issue": https://github.com/Open
 
 This will give us a big list of tensor methods that haven't been implemented yet.
 
-To keep this tutorial simple, and to provide a real world reference, we'll chose a method that has already been implemented: Inline Add.
+To keep this tutorial simple, and to provide a real world reference, we'll chose a method that has already been implemented: IntTensor Add.
 
-If you just want to code:
+If you just want to see the finished code:
 
-* Original issue: https://github.com/OpenMined/PySyft/issues/414
-* PySyft pull request (Python interface code): https://github.com/OpenMined/PySyft/pull/635
-* OpenMined pull request (Unity CPU/GPU code): https://github.com/OpenMined/OpenMined/pull/63/files
+* Original issue: https://github.com/OpenMined/PySyft/issues/755
+* PySyft pull request (Python interface code): https://github.com/OpenMined/PySyft/pull/758/files
+* OpenMined pull request (Unity CPU/GPU code): https://github.com/OpenMined/OpenMined/pull/319/files
 
-## The Python interface
+## Forking PySyft
 
-## The Unity Test
+We need to implement the PySyft interface for our tensor method.
 
-https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined.Tests/Editor/FloatTensorTest.cs
+The PySyft repo is https://github.com/OpenMined/PySyft . If you're not already setup you can `git clone` and follow the local setup instructions on the readme:
 
-## Syft Controller
+```bash
+git clone git@github.com:OpenMined/PySyft.git
+```
 
-https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Network/Controllers/SyftController.cs
+You should fork the PySyft repo so that you can send a pull request later.
 
-## GPU Code
+On the PySyft repo in GitHub, click the `Fork` button.
 
-https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Math/Shaders/FloatTensorShaders.compute
-https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.ShaderOps.cs
+Now back in the terminal you can `git remote add` to add the url of your personal PySyft fork. Mine is https://github.com/gavinuhma/PySyft , so the terminal command looks like below. Just change `gavinuhma` to your github username. I like to give my remote forks the name `fork` (Seems fitting!)
 
-## CPU Code
+```bash
+git remote add fork git@github.com:gavinuhma/PySyft.git
+```
 
-https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.ShaderOps.cs
+To verify, you can list your remotes with `git remote`.
+
+```bash
+git remote
+```
+
+If you cloned PySyft a while ago, you can push to your fork to get it up to date with master.
+
+```bash
+git push fork master
+```
+
+## The PySyft interface (Python)
+
+Since we're adding a method to `IntTensor`, the code for the interface is in the [PySyft](/OpenMined/PySyft) repo under [syft/tensor.py](/OpenMined/PySyft/blob/master/syft/tensor.py).
+
+You'll notice the method is called `__add__`. This is a ["magic method"](https://www.python-course.eu/python3_magic_methods.php) that allows us to overload the `+` operator.
+
+There was already an `__add__` method for the `FloatTensor` class. In this case, the only difference between the two classes are the `int` vs `float` values. So it's fairly easy for us to subclass the `IntTensor` and `FloatTensor` from a `BaseTensor` class.
+
+Take a look at the pull request to see how this was done.
+
+By moving `__add__` into `BaseTensor` we now have our PySyft interface implemented for the `IntTensor` class.
+
+## The PySyft Test (Python)
+
+We'll want to be extra careful that we didn't break anything. We can jump into a Jupyter notebook to test our new operation.
+
+Checkout [the notebook for this tutorial](https://github.com/OpenMined/tutorials/blob/master/intermediate/adding-a-new-tensor.ipynb).
+
+We want to test:
+
+* The `+` op for `FloatTensor`
+* The `+` op for `IntTensor`
+
+You can open Jupyter from the tutorials dir to run it:
+
+```bash
+jupyter notebook
+```
+
+`FloatTensor` addition should already work. But our new `IntTensor` addition will not work until we implement the Unity backend. Let's start by writing the Unity tests...
+
+## The Unity Tests (C#)
+
+The Unity tests are located in the [OpenMined](/OpenMined/OpenMined) repo under [/UnityProject/Assets/OpenMined.Tests/Editor](https://github.com/OpenMined/OpenMined/tree/master/UnityProject/Assets/OpenMined.Tests/Editor).
+
+Similar to PySyft, the `FloatTensor` class in Unity already had an `Add` method implemented. So we can base our `IntTensor` tests off of that. At the time of writing, there was no file for the `IntTensor` tests. You can see how we created [a new test class for IntTensor](https://github.com/OpenMined/OpenMined/pull/319/commits/b07bfccc643f84c74c380962cf7ce7204a833437) by looking at the original commit.
+
+## CPU Code (C#)
+
+In the [OpenMined](/OpenMined/OpenMined) repo open [/UnityProject/Assets/OpenMined/Syft/Tensor/IntTensor.cs](https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/IntTensor.cs). This is the `IntTensor` class where we can add new operations.
+
+Look for the `ProcessMessage` method. `ProcessMessage` is handling the commands sent over the socket connection from `PySyft`.
+
+Also open [/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.cs](https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.cs).
+
+In the `FloatTensor` class you'll see another `ProcessMessage` method. There are 4 cases in the switch statement in `FloatTensor` that we need to copy over to `IntTensor`:
+
+1. `add_elem`
+2. `add_elem_`
+3. `add_scalar`
+4. `add_scalar_`
+
+The `_` appended to two of those methods means `inline`.
+
+You'll also see that the implementations for these call the `Add` method.
+
+Open [/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.Ops.cs](https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/FloatTensor.Ops.cs) to see the implementation of the `Add` method.
+
+We need to copy `Add` from `FloatTensor` over to `IntTensor`.
+
+NOTE: We want to continue to expand the `BaseTensor` class wherever possible. So if you have ideas for ways to reduce the amount of repetitive code between `IntTensor` and `FloatTensor` we'd welcome the contribution! Write some tests first so you can be sure that nothing gets broken in the refactoring! :) Or feel free to create an issue with the `discussion` label on GitHub.
+
+## GPU Code (HLSL)
+
+We've added a new operation to the `IntTensor` class in `PySyft` and `OpenMined`, and we're written tests for the CPU and GPU.
+
+We cover GPU and the HLSL implementation in the advanced tutorial: [gpu_functionality](https://github.com/OpenMined/tutorials/blob/master/advanced/gpu_functionality.markdown)!
+
+Congrats on the progress and welcome to OpenMined!
