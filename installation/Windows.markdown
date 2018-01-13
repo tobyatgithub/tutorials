@@ -48,7 +48,7 @@ From here I'd recommend using the Anaconda Prompt. Might not be the best interfa
 
 `install_for_anaconda_on_windows.bat`
 
-`python3 setup.py install`
+`python setup.py install`
 
 `cd ../`
 
