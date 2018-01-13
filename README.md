@@ -17,9 +17,9 @@ This repository includes step-by-step tutorials for using and adding to function
 ## Contents
 
 ### [Basics](https://github.com/OpenMined/tutorials/tree/master/beginner)
-- [Train a Basic Neural Network (Keras Interface)](https://github.com/OpenMined/tutorials/blob/master/beginner/Keras%20Neural%20Net.ipynb)
+- [Train a Basic Neural Network (Keras Interface)](https://github.com/OpenMined/tutorials/blob/master/beginner/Keras%20Neural%20Net.ipynb) - [YOUTUBE VIDEO](https://youtu.be/Zq4onPm-h2I)
 ### [Intermediate]()
-- [How to Add a (CPU-powered) Function to a Tensor](https://github.com/OpenMined/tutorials/blob/master/intermediate/adding-a-new-tensor.markdown)
+- [How to Add a (CPU-powered) Function to a Tensor](https://github.com/OpenMined/tutorials/blob/master/intermediate/adding-a-new-tensor.markdown) - [YOUTUBE VIDEO](https://www.youtube.com/watch?v=up0BcCN0aDs)
 ### [Advanced]()
 - [How to add a (GPU-powered) Function to a Tensor](https://github.com/OpenMined/tutorials/blob/master/advanced/gpu_functionality.markdown)
 
