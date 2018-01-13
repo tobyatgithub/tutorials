@@ -129,6 +129,13 @@ We need to copy `Add` from `FloatTensor` over to `IntTensor`.
 
 NOTE: We want to continue to expand the `BaseTensor` class wherever possible. So if you have ideas for ways to reduce the amount of repetitive code between `IntTensor` and `FloatTensor` we'd welcome the contribution! Write some tests first so you can be sure that nothing gets broken in the refactoring! :) Or feel free to create an issue with the `discussion` label on GitHub.
 
+## Run Unit Tests (Unity)
+
+Once you have implemented the `Add` method, to validate your implementation, you can run the unit tests within Unity. To do so, you just have to perform the following steps:
+* Open Unity
+* Open TestRunner (Window -> TestRunner)
+* Select unit test and “run selected”
+
 ## GPU Code (HLSL)
 
 We've added a new operation to the `IntTensor` class in `PySyft` and `OpenMined`, and we're written tests for the CPU and GPU.
