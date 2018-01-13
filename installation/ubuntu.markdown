@@ -85,28 +85,20 @@ mkdir OpenMined
 ```
 
 #### Part 1: Fork PySyft an OpenMined Repositories
-/github.com/OpenMined/OpenMined](h
 - Go to the following link: [https://github.com/OpenMined/OpenMined](https://github.com/OpenMined/OpenMined)
 - Click the "Fork" button at the top right corner.
 ![](../resources/images/fork.png)
 - Go to the following link: [https://github.com/OpenMined/PySyft](https://github.com/OpenMined/PySyft)
 - Clik the "Fork" button at the top right corner (yes this is a second time)
 
-This will copy our repositories YOUR github account. Now, you want to clone those repositories to your OpenMined project directory that you created in Part 1.
+This will copy our repositories into YOUR github account. Now, you want to clone those repositories to your OpenMined project directory that you created in Part 1.
 ```
-git clone git@github.com:OpenMined/OpenMined.git
-git clone https://github.com/<your github username>/PySyft.git
-```
-
-#### Part 2: Install and Build
-```
-cd PySyft
-pip install -r requirements.txt
-python setup.py install
-cd ../
+git clone git@github.com:<your github username>/OpenMined.git
+git clone git@github.com:<your github username>/PySyft.git
 ```
 
-If you have any trouble with the installation of PySyft, debug using the [README](https://github.com/OpenMined/PySyft).
+#### Part 2: Install PySyft
+Follow the instructions in the [PySyft README](https://github.com/OpenMined/PySyft#local-setup).
 
 # Step 3: Start Jupyter Notebook
 
