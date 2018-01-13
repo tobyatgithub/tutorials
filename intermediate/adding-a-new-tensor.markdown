@@ -6,11 +6,11 @@ This tutorial will show where to find the operations that still need to be imple
 
 # How OpenMined Tensors Work - The Magic Under the Hood
 
-Tensor methods (link) are operations that we perform on a matrix. One of the goals of OpenMined, is to be as portable as possible. For this reason, we're building our backend in Unity. A data scientist can still develop their models in Python, their preferred language, but the computations are happening in Unity!
+Tensor methods are operations that we perform on a matrix. One of the goals of OpenMined, is to be as portable as possible. For this reason, we're building our backend in Unity. A data scientist can still develop their models in Python, their preferred language, but the computations are happening in Unity!
 
-For performance reasons, we want to be able to run computations of the GPU. GPUs are really good at matrix math because of their large number of cores (link). For portability reasons, we also want to support CPU computations. This means when we add a new tensor method to OpenMined, we need to write the CPU and the GPU code.
+For performance reasons, we want to be able to run computations on the GPU. GPUs are really good at matrix math because of their large number of cores. For portability reasons, we also want to support CPU computations, as some systems will not have a compatible GPU. This means when we add a new tensor method to OpenMined, we need to write the CPU and the GPU code.
 
-A major benefit of the Unity platform is the ability to access GPUs across a wide range of platforms (link) - from Xbox, Mac OS X, to mobile platforms like iOS and Android. As a developer, this means writing tensor methods in a shader language called HLSL (link).
+A major benefit of the Unity platform is the ability to access GPUs across a wide range of platforms - from Xbox, Mac OS X, to mobile platforms like iOS and Android. As a developer, this means writing tensor methods in a shader language called HLSL.
 
 The CPU methods are written in C#, which is the main language of Unity.
 
@@ -69,7 +69,7 @@ git push fork master
 
 ## The PySyft interface (Python)
 
-Since we're adding a method to `IntTensor`, the code for the interface is in the [PySyft](/OpenMined/PySyft) repo under [syft/tensor.py](/OpenMined/PySyft/blob/master/syft/tensor.py).
+Since we're adding a method to `IntTensor`, the code for the interface is in the [PySyft](https://github.com/OpenMined/PySyft) repo under [syft/tensor.py](https://github.com/OpenMined/PySyft/blob/master/syft/tensor.py).
 
 You'll notice the method is called `__add__`. This is a ["magic method"](https://www.python-course.eu/python3_magic_methods.php) that allows us to overload the `+` operator.
 
@@ -100,13 +100,13 @@ jupyter notebook
 
 ## The Unity Tests (C#)
 
-The Unity tests are located in the [OpenMined](/OpenMined/OpenMined) repo under [/UnityProject/Assets/OpenMined.Tests/Editor](https://github.com/OpenMined/OpenMined/tree/master/UnityProject/Assets/OpenMined.Tests/Editor).
+The Unity tests are located in the [OpenMined](https://github.com/OpenMined/OpenMined) repo under [/UnityProject/Assets/OpenMined.Tests/Editor](https://github.com/OpenMined/OpenMined/tree/master/UnityProject/Assets/OpenMined.Tests/Editor).
 
 Similar to PySyft, the `FloatTensor` class in Unity already had an `Add` method implemented. So we can base our `IntTensor` tests off of that. At the time of writing, there was no file for the `IntTensor` tests. You can see how we created [a new test class for IntTensor](https://github.com/OpenMined/OpenMined/pull/319/commits/b07bfccc643f84c74c380962cf7ce7204a833437) by looking at the original commit.
 
 ## CPU Code (C#)
 
-In the [OpenMined](/OpenMined/OpenMined) repo open [/UnityProject/Assets/OpenMined/Syft/Tensor/IntTensor.cs](https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/IntTensor.cs). This is the `IntTensor` class where we can add new operations.
+In the [OpenMined](https://github.com/OpenMined/OpenMined) repo open [/UnityProject/Assets/OpenMined/Syft/Tensor/IntTensor.cs](https://github.com/OpenMined/OpenMined/blob/master/UnityProject/Assets/OpenMined/Syft/Tensor/IntTensor.cs). This is the `IntTensor` class where we can add new operations.
 
 Look for the `ProcessMessage` method. `ProcessMessage` is handling the commands sent over the socket connection from `PySyft`.
 
