@@ -121,10 +121,6 @@ If you don't see `Syft Server Script` in the inspector pane, drag the file Asset
 
 ![](../resources/images/DragSyftServer.png)
 
-If you DO see the `Syft Server Script` but `FloatTensorShaders` is NOT in the `Shader` area (if area will is grayed out and say `None (ComputeShader)`. Drag the file Assets/OpenMined/Syft/Tensor/Ops/Shaders/FloatTensorShaders into that text area like seen below.
-
-![](../resources/images/DragShader.png)
-
 #### Part 5: Press Play!!!
 
 At the top of the Unity application there's a Play button. Press it! This will start the OpenMined server and you'll be ready to start doing some tutorials!!
