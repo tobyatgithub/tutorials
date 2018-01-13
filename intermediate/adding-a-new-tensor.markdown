@@ -42,7 +42,7 @@ We need to implement the PySyft interface for our tensor method.
 The PySyft repo is https://github.com/OpenMined/PySyft . If you're not already setup you can `git clone` and follow the local setup instructions on the readme:
 
 ```bash
-git clone git@github.com:OpenMined/PySyft.git
+git clone https://github.com/OpenMined/PySyft.git
 ```
 
 You should fork the PySyft repo so that you can send a pull request later.
