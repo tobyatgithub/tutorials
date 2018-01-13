@@ -131,4 +131,8 @@ NOTE: We want to continue to expand the `BaseTensor` class wherever possible. So
 
 ## GPU Code (HLSL)
 
-Work in progress.
+We've added a new operation to the `IntTensor` class in `PySyft` and `OpenMined`, and we're written tests for the CPU and GPU.
+
+We cover GPU and the HLSL implementation in the advanced tutorial: [gpu_functionality](https://github.com/OpenMined/tutorials/blob/master/advanced/gpu_functionality.markdown)!
+
+Congrats on the progress and welcome to OpenMined!
