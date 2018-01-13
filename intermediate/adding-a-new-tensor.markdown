@@ -21,7 +21,7 @@ Let's take a look at what happens when you call a tensor method from Python:
 * If a GPU is available, the operation is processed by HLSL.
 * Otherwise, the operation is processed by C#.
 
-# Add a feature to Float Tensors (Code!)
+# Add a feature to IntTensor (Code!)
 
 First we want to search GitHub for a "good first issue": https://github.com/OpenMined/PySyft/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22
 
