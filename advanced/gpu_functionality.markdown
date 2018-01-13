@@ -2,6 +2,8 @@
 
 In this tutorial, we're going to walk through the basics of how to work with the OpenMined community to write GPU code in the OpenMined ecosystem. Specifically, we're going to implement a new function in the IntTensor class. Step 1 is to go to PySyft's Github Issues page and look for a good project.
 
+**Video Tutorial:** https://youtu.be/g9UaQktlp5A
+
 ## Step 1: Find an Issue on Github
 
 The issues for our IntTensor live in the Python client, PySyft. So, we're going to navigate to the [PySyft Repository](https://github.com/OpenMined/PySyft) and click the [Issues](https://github.com/OpenMined/PySyft/issues) tab, showing a page that (at the time of writing) looks like this.
