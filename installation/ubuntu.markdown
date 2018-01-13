@@ -8,6 +8,8 @@ and repositories correctly installed and ready to work
 together, which can have unique challenges for each
 system. To that end, let's get you set up and running!
 
+**Video Tutorial:** https://youtu.be/P3DPmVlWye0
+
 # Step 1: Install Unity
 
 The longest part of the process is downloading the Unity3d video game engine (because it's a rather large file). You can download an installer for linux [here](http://beta.unity3d.com/download/2ca68d182788/public_download.html).
