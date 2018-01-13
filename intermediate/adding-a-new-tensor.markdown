@@ -29,11 +29,11 @@ This will give us a big list of tensor methods that haven't been implemented yet
 
 To keep this tutorial simple, and to provide a real world reference, we'll chose a method that has already been implemented: IntTensor Add.
 
-If you just to see the finished code:
+If you just want to see the finished code:
 
 * Original issue: https://github.com/OpenMined/PySyft/issues/755
-* PySyft pull request (Python interface code): _
-* OpenMined pull request (Unity CPU/GPU code): _
+* PySyft pull request (Python interface code): https://github.com/OpenMined/PySyft/pull/758/files
+* OpenMined pull request (Unity CPU/GPU code): https://github.com/OpenMined/OpenMined/pull/319/files
 
 ## Forking PySyft
 
